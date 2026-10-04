@@ -24,3 +24,26 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+const bul= document.querySelector(".gallery");
+const nesneleriayir=images
+.map((ayir)=>`
+<li class="list-ekle">
+<img src="${ayir.url}" alt="${ayir.alt}">
+</li>`)
+.join("");
+
+bul.insertAdjacentHTML("beforeend",nesneleriayir);
+
+
+// ikinci yöntem yazıldım
+//  const gallery=document.querySelector(".gallery")
+
+//  const elements=images.map((image)=>{
+//   const li=document.createElement("li");
+//   const img=document.createElement("img");
+//   img.src=image.url;
+//   img.alt=image.alt;
+//   li.append(img)
+//   return li;
+//  })
+//  gallery.append(...elements)
